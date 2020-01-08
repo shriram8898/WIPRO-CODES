@@ -1,0 +1,31 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+int main()
+{
+    int a[100],b[100],c[100],i,j,k,l,m=0,n=0;
+    cin>>k>>l;
+    for(i=0;i<l;i++)
+        cin>>a[i];
+    for(i=0;i<k;i++)
+        cin>>b[i];
+    for(i=0;i<l;i++)
+        c[i]=a[i];
+        j=i;
+    for(i=0;i<k;i++)
+        c[j++]=b[i];
+    for(i=0;i<l;i++)
+    {
+        m=0;
+        for(int r=i+1;r<l;r++)
+        {
+            if(c[i]==c[r]&&c[i]!=0)
+            {
+                m=1;c[r]=0;
+            }
+        }
+        if(m==0)
+            n++;
+    }
+        cout<<n-1;
+}

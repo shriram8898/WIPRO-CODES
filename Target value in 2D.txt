@@ -1,0 +1,19 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+int main()
+{
+  int i,j,k,l,m,n,a[100][100];
+  cin>>l>>m;
+  for(i=0;i<l;i++)
+    for(j=0;j<m;j++)
+    cin>>a[i][j];
+    cin>>n;
+    for(i=0;i<l;i++)
+    for(j=0;j<m;j++)
+        if(a[i][j]==n)
+    {
+        cout<<i<<" "<<j;break;
+    }
+
+}

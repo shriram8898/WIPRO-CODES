@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+
+int main()
+{
+    long long int num1, num2, factor, temp;
+
+    num1= 2147483647LL*13;
+    num2 =2147483647LL*17 ;
+    printf("%lld %lld\n", num1, num2);
+
+// set my environment
+if(num1 > num2)
+{
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+}
+   if(num2 % num1 == 0)
+        printf("%lld", num1);
+        else
+        {
+        factor = num1 / 2;
+        while(factor >=1)
+        {
+             if(num1 % factor == 0 && num2 % factor == 0)
+             break;
+            factor--;
+        }
+        printf("%lld", factor);
+        }
+return 0;
+}
